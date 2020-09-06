@@ -1,0 +1,35 @@
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot?serverTimezone=UTC
+    username: root
+    password: root
+
+
+#  security:
+#    user:
+#      name: admin
+#      password: admin
+#      roles: ADMIN,USER
+
+#spring.jpa.hibernate.ddl-auto=create
+  jpa.generate-ddl: true
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 20MB
+
+logging.level.web: DEBUG
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+
+

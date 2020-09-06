@@ -1,0 +1,30 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<html>
+<head>
+    <title>Add book</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<jsp:include page="../common/cap.jsp"/>
+<h1>Add book</h1>
+<form:form method="post" modelAttribute="book">
+    <div class="flex-container">
+        <span>Title:<form:input path="title"/></span><form:errors path="title" cssClass="error"/>
+        <span>Rating: <form:input path="rating"/></span><form:errors path="rating" cssClass="error"/>
+        <span>Description: <form:input path="description"/></span><form:errors path="description" cssClass="error"/>
+    </div>
+    <input type="submit" value="Add book">
+</form:form>
+</body>
+</html>
