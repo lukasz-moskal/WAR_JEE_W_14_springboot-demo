@@ -24,6 +24,16 @@ spring:
       max-file-size: 5MB
       max-request-size: 20MB
 
+  mail:
+    protocol: smtp
+    host: smtp.gmail.com
+    port: 587
+    username: <tu trzeba wstawić użytkownka>
+    password: <tu trzeba wstawić hasło>
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
 logging.level.web: DEBUG
 logging:
   level:
